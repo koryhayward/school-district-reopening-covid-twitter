@@ -1,4 +1,4 @@
-﻿fips,STNAME,CNTYNAME,POPESTIMATE2019
+fips,STNAME,CNTYNAME,POPESTIMATE2019
 1000,Alabama,Alabama,4903185
 1001,Alabama,Autauga County,55869
 1003,Alabama,Baldwin County,223234
@@ -1833,7 +1833,7 @@
 35007,New Mexico,Colfax County,11941
 35009,New Mexico,Curry County,48954
 35011,New Mexico,De Baca County,1748
-35013,New Mexico,DoÒa Ana County,218195
+35013,New Mexico,Do�a Ana County,218195
 35015,New Mexico,Eddy County,58460
 35017,New Mexico,Grant County,26998
 35019,New Mexico,Guadalupe County,4300
