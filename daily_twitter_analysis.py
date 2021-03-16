@@ -182,11 +182,11 @@ def get_all_tweets(list_id):
     df_concat_tweets = df_concat_tweetes.loc[df_concat_tweetes['Tweet Date'].isin([{datetime.date.today()}])]
 
     #read in file containing mapping of individuals 
-    X_coverage = pd.read_excel('"YOUR FILE.xlsx')
+    coverage = pd.read_excel('"YOUR FILE.xlsx')
 
     #merge dataframe with coverage file on Twitter handles 
     df_concat_tweetes = pd.merge(df_concat_tweetes,
-                                 X_coverage,
+                                 coverage,
                                  how='left',
                                  left_on=['User'],
                                  right_on=['Twitter Handle'])
