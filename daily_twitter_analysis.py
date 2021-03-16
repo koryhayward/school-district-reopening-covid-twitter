@@ -32,7 +32,7 @@ api = tweepy.API(auth)
 list_id = #insert you list id here
 
 #define the function that will collect the maximum number of most recent tweets — 3,200, 
-#analyze the tweets for keywords, append the individual assigned to the state, 
+#analyze the tweets for keywords, append the individual
 #and save the file based on the date for archival
 
 def get_all_tweets(list_id):
@@ -200,7 +200,7 @@ def get_all_tweets(list_id):
     #Reorder data frame alphabetically to ensure later import matches with new data and doesn't create unncessary columns
     #this dataframe — df_concat_tweets — holds all the new Tweets of interest to us
     df_concat_tweetes = df_concat_tweetes[[
-        'Date of Update', 'Tweet Date','Keyword', 'Twitter Handle', 'Text', 'District',  'State', 'Policy Coverage', 'Email' 
+        'Date of Update', 'Tweet Date','Keyword', 'Twitter Handle', 'Text', 'District',  'State', 'Coverage', 'Email' 
     ] + []]
     
     df_concat_tweetes.to_csv('district_tweets.csv')
@@ -209,7 +209,7 @@ def get_all_tweets(list_id):
     array = df_concat_tweetes.to_numpy()
     
     #create person-specific dataframes
-    df_kory = df_concat_tweetes.loc[df_concat_tweetes['X Coverage'].isin(['Kory'])]
+    df_kory = df_concat_tweetes.loc[df_concat_tweetes['Coverage'].isin(['Kory'])]
   
     #email login info here
     login = "" # paste your login 
@@ -267,7 +267,7 @@ def get_all_tweets(list_id):
     #write the csv, include {datetime} function to automatically save the file with today's date for archival
     with open(f'/Users/"USER PATH"/District_Tweets/{datetime.date.today()}_school_district_tweets.csv', 'w', encoding='utf-8') as t:
         writer = csv.writer(t)
-        writer.writerow(['Date of Update', 'Tweet Date','Keyword', 'Twitter Handle', 'Text', 'District',  'State', 'Policy Coverage', 'Email'])
+        writer.writerow(['Date of Update', 'Tweet Date','Keyword', 'Twitter Handle', 'Text', 'District',  'State', 'Coverage', 'Email'])
         writer.writerows(array)
         print('File was written to the desktop.')
         
